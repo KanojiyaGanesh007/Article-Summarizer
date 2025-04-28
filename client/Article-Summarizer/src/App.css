@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
+*/
+
+/* App-related global styles */
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  padding: 0;
+  pointer-events: none;
+  background-color: #f9fafb;
+}
+
+.main:before {
+  background: rgba(255, 255, 255, 0.95);
+  position: absolute;
+  content: "";
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.app {
+  @apply relative z-10 flex justify-center items-center flex-col w-full min-h-screen mx-auto px-4 sm:px-6;
+}
+
+/* Navigation styles */
+nav {
+  @apply flex justify-between items-center w-full mb-10;
+}
+
+nav img {
+  @apply w-28 object-contain;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl;
+}
+
+.card-title {
+  @apply text-xl font-bold text-gray-800 mb-2;
+}
+
+.card-description {
+  @apply text-gray-600 mb-4;
+}
+
+/* Page container */
+.page-container {
+  @apply w-full max-w-7xl mx-auto py-8 px-4;
+}
+
+/* Section styles */
+.section-title {
+  @apply text-3xl font-bold text-gray-800 mb-6 text-center;
+}
+
+.section-description {
+  @apply text-gray-600 text-center mb-8 max-w-2xl mx-auto;
+}
+
+/* Back button styles */
+.back-button {
+  @apply inline-flex items-center px-4 py-2 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors duration-200 border border-blue-600;
+}
